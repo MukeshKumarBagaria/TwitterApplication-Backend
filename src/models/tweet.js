@@ -20,6 +20,12 @@ tweetSchema.virtual('contentWithAuthor').get(function process() {
     return `${this.content} by ${this.userEmail}`;
   });
 
+  tweetSchema.pre('save',(next)=>{
+console.log("inside a hook");
+this.content=this.content+" ......"
+  next();
+  })
+
 const Tweet= mongoose.model('Tweet',tweetSchema);
 
 module.exports=Tweet;

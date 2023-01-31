@@ -12,12 +12,17 @@ app.listen(3000,async ()=>{
 
 
   const tweetRepo = new TweetRepository();
-// const tweet=await tweetRepo.create({content:"this is my first tweet",userEmail:"mkbagaria13@gmail.com"});
-// const comment=await Comment.create({content:"this is my  comment associated with first tweet"});
+const tweet=await tweetRepo.create({content:"this is my  tweet with hooks",userEmail:"mkbagaria13@gmail.com"});
+// const comment=await Comment.create({content:"this is my  comment associated with hooks tweet"});
 // tweet.comments.push(comment);
 // tweet.save();
 //const tweet=await tweetRepo.getWithComments('63d69a88a6cdae6ac9bfa6fc');//in this query comments are populatig with tweets 
-const tweet=await tweetRepo.getAll(0,2);
+//const tweet=await tweetRepo.getAll(0,2);
   
-console.log(tweet[0].contentWithAuthor);
+//console.log(tweet[0].contentWithAuthor);//virtuals example
+
+console.log(tweet);
+
+
+
 })
