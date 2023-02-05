@@ -1,5 +1,4 @@
-const mongoose =require('mongoose');
-
+import mongoose from "mongoose";
 const hashtagShcema= new mongoose.Schema({
 
     title:{
@@ -12,6 +11,6 @@ const hashtagShcema= new mongoose.Schema({
     }]
 });
 
-const hashtag= mongoose.model('hashtag',hashtagShcema);
+const Hashtag= mongoose.model('Hashtag',hashtagShcema);
 
-module.exports=hashtag;
+export default Hashtag;

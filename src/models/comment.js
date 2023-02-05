@@ -1,5 +1,4 @@
-const mongoose=require('mongoose');
-
+import mongoose from "mongoose";
 const commentSchema= new mongoose.Schema({
     content:{
         type:String,
@@ -13,4 +12,4 @@ const commentSchema= new mongoose.Schema({
 
 const Comment= mongoose.model('Comment',commentSchema);
 
-module.exports=Comment;
+ export default Comment;

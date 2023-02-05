@@ -1,6 +1,4 @@
-const Comment = require('../models/comment');
-const Tweet = require('../models/tweet');
-
+import Tweet from '../models/tweet.js';
 class TweetRepository{
 
     async create(data){
@@ -36,15 +34,17 @@ class TweetRepository{
            const tweet=Tweet.findByIdAndUpdate(id,data,{new:true});
            return tweet;
         } catch (error) {
+            console.log(error);
             
         }
     }
 
     async destroy(id){
         try {
-            const tweet=Tweet.findByIdAndRemove(id);
-            
+            const response=Tweet.findByIdAndRemove(id);
+            return response;
         } catch (error) {
+            console.log(error);
             
         }
     }
@@ -58,5 +58,4 @@ class TweetRepository{
         }
     }
 }
-
-module.exports=TweetRepository;
+export default TweetRepository;
