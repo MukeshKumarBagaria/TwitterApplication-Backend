@@ -11,10 +11,10 @@ const likeSchema= new mongoose.Schema({
         required:true,
         refPath:'onModel'
     },
-    user:{
+    User:{
         type:mongoose.Schema.Types.ObjectId,
         required:true,
-        ref:'user'
+        ref:'User'
     }
 
 },{timestamps:true});
