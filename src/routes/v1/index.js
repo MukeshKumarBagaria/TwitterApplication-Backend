@@ -10,7 +10,7 @@ const router=express.Router();
 router.post('/likes/toggle',toggleLike);
 router.post('/tweets',authenticate,createTweet);
 
-router.post('/comment',createComment)
+router.post('/comment',authenticate,createComment)
 
 router.post('/signup',createUser)
 
