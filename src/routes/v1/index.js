@@ -8,7 +8,7 @@ const router=express.Router();
 
 
 router.post('/likes/toggle',toggleLike);
-router.post('/tweets',authenticate,createTweet);
+router.post('/tweets',createTweet);
 
 router.post('/comment',authenticate,createComment)
 
